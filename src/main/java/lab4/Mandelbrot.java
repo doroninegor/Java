@@ -1,12 +1,14 @@
+package lab4;
+
 import java.awt.geom.Rectangle2D;
 
-public class Tricorn {
+public class Mandelbrot extends Lab4.FractalGenerator {
     public static final int MAX_ITERATIONS = 2000;
     public void getInitialRange(Rectangle2D.Double range) {
         range.x=-2;
-        range.y=-2;
-        range.height=2;
-        range.width=2;
+        range.y=-1.5;
+        range.height=3;
+        range.width=3;
     }
 
     public int numIterations(double x, double y) {

@@ -1,3 +1,5 @@
+package lab4;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -8,10 +10,10 @@ public class FractalExplorer {
     private double centerX=0;
     private double centerY=0;
     private double zoom;
-    private JImageDisplay jimage;
+    private JImageDispley jimage;
     //private FractalGenerator fgen = new BurningShip();
     //private FractalGenerator fgen = new Tricorn();
-    private FractalGenerator fgen = new Mandelbrot();
+    private Lab4.FractalGenerator fgen = new Mandelbrot();
     private Rectangle2D.Double range = new Rectangle2D.Double();
 
     public FractalExplorer(int size) {
@@ -34,7 +36,7 @@ public class FractalExplorer {
         jpl.add(jbt);
         jpl1.add(jbl);
         jpl1.add(jcb);
-        jimage = new JImageDisplay(size,size);jfrm.add(jpl, BorderLayout.SOUTH);
+        jimage = new JImageDispley(size,size);jfrm.add(jpl, BorderLayout.SOUTH);
         jfrm.add(jimage, BorderLayout.CENTER);
         jfrm.add(jpl1, BorderLayout.NORTH);
         jcb.addItem("Mandelbrot");
@@ -56,9 +58,9 @@ public class FractalExplorer {
     private void drawFractal() {
         for (int x = 0; x < size; x++) {
             for (int y = 0; y < size; y++) {
-                double xCoord = FractalGenerator.getCoord(range.x, range.x + range.width,
+                double xCoord = Lab4.FractalGenerator.getCoord(range.x, range.x + range.width,
                         size, x);
-                double yCoord = FractalGenerator.getCoord(range.y, range.y + range.height,
+                double yCoord = Lab4.FractalGenerator.getCoord(range.y, range.y + range.height,
                         size, y);
                 if (fgen.numIterations(xCoord, yCoord) == -1) {
                     jimage.drawPixel(x, y, 0);
@@ -83,12 +85,11 @@ public class FractalExplorer {
 
     public class TestMouseListener implements MouseListener {
         public void mouseClicked(MouseEvent mouseEvent) {
-            double mouseX = (mouseEvent.getX()-size/2)/(size/range.width);
-            double mouseY = (mouseEvent.getY()-size/2)/(size/range.width);
-            fgen.recenterAndZoomRange(range, centerX+mouseX,centerY+mouseY, zoom);
-            centerX=centerX+mouseX;
-            centerY=centerY+mouseY;
-            jimage.repaint();
+            double mouseX = Lab4.FractalGenerator.getCoord(range.x, range.x + range.width, size, mouseEvent.getX());
+            double mouseY = Lab4.FractalGenerator.getCoord(range.y, range.y + range.width, size, mouseEvent.getY());
+            fgen.recenterAndZoomRange(range, mouseX, mouseY, zoom);
+
+            
             drawFractal();
 
         }
@@ -109,7 +110,7 @@ public class FractalExplorer {
     }
 
     public static void main(String[] args){
-        new FractalExplorer(500);
+        new FractalExplorer(700);
     }
 
 }

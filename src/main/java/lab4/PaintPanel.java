@@ -1,3 +1,5 @@
+package lab4;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
@@ -46,6 +48,6 @@ class PaintDemo{
         jfrm.setVisible(true);
     }
     public static void main(String args[]){
-                new PaintDemo();
-            }
+        new PaintDemo();
     }
+}
