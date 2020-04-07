@@ -1,6 +1,6 @@
 package com.vogella.build.maven.java;
 
-public class Point3d {
+public class Point3d{
     private double xCoord;
     private double yCoord;
     private double zCoord;

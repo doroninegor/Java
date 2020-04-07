@@ -1,6 +1,6 @@
 package com.vogella.build.maven.java;
 
-public class Palindrome {
+public class Palindrome{
     public static void main(String[] args) {
 
         for (int i = 0; i < args.length; i++) {

@@ -3,7 +3,7 @@ package com.vogella.build.maven.java;
 public class Primes {
     public static void main(String[] args) {
         System.out.println("Простые числа:");
-        for (int i = 2; i < 100; i++) {
+        for (int i = 2; i < 100; i++){
             if (IsPrime(i) == true) {
                 System.out.println(i);
             }

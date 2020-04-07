@@ -2,7 +2,7 @@ import com.vogella.build.maven.java.Point3d;
 
 import java.util.Scanner;
 
-public class Lab1 {
+public class Lab1{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Point3d[] Points = new Point3d[3];
