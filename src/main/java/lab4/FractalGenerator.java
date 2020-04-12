@@ -1,7 +1,6 @@
 package Lab4;
 import java.awt.geom.Rectangle2D;
 
-
 /**
  * This class provides the common interface and operations for fractal
  * generators that can be viewed in the Fractal Explorer.

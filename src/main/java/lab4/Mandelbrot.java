@@ -1,6 +1,5 @@
 package lab4;
 import java.awt.geom.Rectangle2D;
-
 public class Mandelbrot extends Lab4.FractalGenerator {
     public static final int MAX_ITERATIONS = 2000;
     public void getInitialRange(Rectangle2D.Double range) {
