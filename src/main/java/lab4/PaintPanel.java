@@ -34,7 +34,6 @@ class PaintPanel extends JPanel{
         g.drawLine(x2,y2,xS,yS);
     }
 }
-
 class PaintDemo{
     JLabel jlab;
     PaintPanel pp;

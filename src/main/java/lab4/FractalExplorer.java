@@ -89,7 +89,7 @@ public class FractalExplorer {
             double mouseY = Lab4.FractalGenerator.getCoord(range.y, range.y + range.width, size, mouseEvent.getY());
             fgen.recenterAndZoomRange(range, mouseX, mouseY, zoom);
 
-            
+
             drawFractal();
 
         }
@@ -110,7 +110,7 @@ public class FractalExplorer {
     }
 
     public static void main(String[] args){
-        new FractalExplorer(700);
+        new FractalExplorer(500);
     }
 
 }

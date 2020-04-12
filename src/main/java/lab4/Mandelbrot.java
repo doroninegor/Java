@@ -1,5 +1,4 @@
 package lab4;
-
 import java.awt.geom.Rectangle2D;
 
 public class Mandelbrot extends Lab4.FractalGenerator {
