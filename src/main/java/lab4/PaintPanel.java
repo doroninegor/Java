@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-class PaintPanel extends JPanel{
+public class PaintPanel extends JPanel{
     Insets ins;
     Random rand;
     PaintPanel() {
