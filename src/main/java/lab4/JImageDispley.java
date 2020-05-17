@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import static java.awt.image.BufferedImage.TYPE_INT_RGB;
 
+
 public class JImageDispley extends JComponent {
     private int Width;
     private int Heigth;
