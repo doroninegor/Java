@@ -36,7 +36,6 @@ class exe1 {
         }
     }
 }
-
 class exe2 {
     public static String split(String s) {
         int maxl = 0;
