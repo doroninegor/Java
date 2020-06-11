@@ -1,4 +1,4 @@
-package lab2;
+package com.vogella.build.maven.java;
 public class Point2d {
     double xCoord; // координата X
     double yCoord;//координата Y

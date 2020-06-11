@@ -1,4 +1,4 @@
-package lab2;
+package com.vogella.build.maven.java;
 import java.util.Scanner;
 
 public class Lab1 {
